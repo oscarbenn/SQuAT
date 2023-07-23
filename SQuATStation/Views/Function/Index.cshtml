@@ -1,0 +1,49 @@
+@{
+    ViewData["Title"] = "Function Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Hello</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#connectToTestlink">
+  Connect To Testlink
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="connectToTestlink" tabindex="-1" aria-labelledby="connectToTestlinkLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="connectToTestlinkLabel">Connect To Testlink</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="Function/Connect" method="get">
+            <div class="mb-3">
+                <label for="testProject" class="form-label">Project Name</label>
+                <input type="text" class="form-control" id="testProject">
+            </div>
+            <div class="mb-3">
+                <label for="urlTestlink" class="form-label">URL</label>
+                <input type="text" class="form-control" id="urlTestlink">
+            </div>
+            <div class="mb-3">
+                <label for="accessKey" class="form-label">ACCESS KEY</label>
+                <input type="password" class="form-control" id="accessKey">
+            </div>
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="rememberAPI">
+                <label class="form-check-label" for="rememberAPI">Remember Connection</label>
+            </div>
+            <button type="submit" class="btn btn-success">Connect</button>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
